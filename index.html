@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Прогноз погоды</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Прогноз погоды</h1>
+    <div id="currentLocation" class="current-location" aria-live="polite"></div>
+  </header>
+
+  <main class="app">
+    <section class="controls" id="controls">
+      <button id="refreshBtn" class="btn">Обновить</button>
+      <button id="geoBtn" class="btn" type="button">По местоположению</button>
+
+      <div class="city-form" id="city-form">
+        <div class="input-wrap">
+          <input id="cityInput" type="text" placeholder="Добавить город" autocomplete="off" />
+          <ul id="suggestions" class="suggestions" role="listbox" aria-label="Подсказки городов"></ul>
+        </div>
+        <button id="addCityBtn" class="btn" type="button">Добавить</button>
+        <div id="cityError" class="error" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="weatherContainer" class="weather-container" aria-live="polite">
+      <!-- Здесь будут карточки прогноза -->
+    </section>
+  </main>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
