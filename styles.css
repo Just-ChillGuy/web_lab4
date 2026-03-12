@@ -64,7 +64,6 @@ body{
 }
 #cityInput:focus{box-shadow:0 0 0 3px rgba(43,124,255,0.12); border-color:var(--accent);}
 
-/* Список подсказок */
 .suggestions{
   position:absolute;
   left:0;
@@ -91,11 +90,7 @@ body{
 }
 .suggestions li:hover,
 .suggestions li[aria-selected="true"]{background:rgba(43,124,255,0.08)}
-
-/* Ошибки */
 .error{color:var(--error); font-size:0.85rem; margin-top:6px; min-height:18px}
-
-/* Контейнер с карточками */
 .weather-container{
   display:grid;
   grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
@@ -103,7 +98,6 @@ body{
   width:100%;
 }
 
-/* Карточка прогноза (используется класс .weather-card) */
 .weather-card{
   background:var(--card);
   border-radius:var(--radius);
@@ -122,8 +116,6 @@ body{
 .card-actions .btn:hover{color:var(--accent); background:rgba(43,124,255,0.06);}
 
 .card-body{min-height:80px;}
-
-/* День внутри карточки */
 .day{
   background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
   border-radius:8px;
@@ -135,15 +127,9 @@ body{
 }
 .day b{margin-right:8px;}
 .day .desc{color:var(--muted)}
-
-/* Состояния загрузки и ошибки внутри карточки */
 .loading{color:var(--muted); text-align:center; padding:8px 0;}
 .forecast-error{color:var(--error); text-align:center; padding:8px 0;}
-
-/* Подвал */
 .footer{text-align:center; color:var(--muted); font-size:0.85rem; margin-top:10px;}
-
-/* Адаптив */
 @media (max-width:520px){
   .controls{flex-direction:column; align-items:stretch;}
   .city-form{justify-content:space-between;}
