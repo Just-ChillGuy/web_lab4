@@ -28,7 +28,6 @@ const App = (() => {
     try {
       if (raw === null || typeof raw === 'undefined') return fallback;
       const parsed = JSON.parse(raw);
-      // if parsed is null (literal "null"), return fallback
       return (parsed === null) ? fallback : parsed;
     } catch (e) {
       return fallback;
